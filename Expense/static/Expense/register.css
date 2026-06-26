@@ -1,0 +1,113 @@
+/* Page Center */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #172554
+    );
+    min-height: 100vh;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+/* Form Card */
+
+form {
+    width: 28rem;
+    background: #0f172a;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+
+.form-heading {
+    text-align: center;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Form Fields */
+
+.form-control {
+    margin-bottom: 1.2rem;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #00e676;
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.15);
+}
+
+/* Error Messages */
+
+.errorlist {
+    list-style: none;
+    margin-top: 0.4rem;
+    color: #ef4444;
+    font-size: 0.9rem;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: #00e676;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #00c853;
+    transform: translateY(-2px);
+}
+
+/* Login Link */
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: #94a3b8;
+}
+
+.auth-link a {
+    color: #00e676;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}

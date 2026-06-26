@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+Report
+{% endblock %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'Expense/report.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h1 class="report-heading">Expense Report</h1>
+
+<div class="report-container">
+
+    <div class="report-card">
+        <h3>Total Expense</h3>
+        <p>₹{{ total }}</p>
+    </div>
+
+    <div class="report-card">
+        <h3>Highest Expense</h3>
+        <p>₹{{ highest }}</p>
+    </div>
+
+    <div class="report-card">
+        <h3>Average Expense</h3>
+        <p>₹{{ average|floatformat:2 }}</p>
+    </div>
+
+    <div class="report-card">
+        <h3>Total Entries</h3>
+        <p>{{ total_expenses }}</p>
+    </div>
+
+    <div class="report-card">
+        <h3>Categories</h3>
+        <p>{{ total_categories }}</p>
+    </div>
+
+</div>
+
+{% endblock %}

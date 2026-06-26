@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %} Register {% endblock %}
+{% block css_file %}
+<link rel="stylesheet" href="{% static "Expense/register.css" %}">
+{% endblock %}
+{% block content %}
+<main>
+    <form action="" method="post" id="form-control">
+        <h2 style="color: aliceblue;">REGISTER</h2>
+       {% csrf_token %} 
+       {% for us in user %}
+       <div class="form-control">
+        
+          {{ us.label_tag }}
+          {{ us }}
+          {{ us.errors }}
+       </div>
+       {% endfor %}
+        <button type="submit">register</button>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common CSS -->
+   <link rel="stylesheet" href="{% static 'app.css' %}">   
+<link rel="stylesheet" href="{% static 'Expense/include.css' %}">
+
+    {% block css_file %}
+    {% endblock %}
+
+    <title>{% block page_title %}{% endblock %}</title>
+</head>
+<body>
+
+
+    {% include "Expense/include/include.html" %}
+     
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

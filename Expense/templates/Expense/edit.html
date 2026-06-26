@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %} Home {% endblock %}
+{% block css_file %}
+<link rel="stylesheet" href="{% static "Expense/edit.css" %}">
+{% endblock %}
+{% block content %}
+<main>
+    <form  action="" method="post" id="form-control">
+       {% csrf_token %} 
+       {% for exp in expense %}
+       <div class="form-control" style="color: aliceblue;">
+          {{ exp.label_tag }}
+          {{ exp }}
+          {{ exp.errors }}
+       </div>
+       {% endfor %}
+        
+        <button type="submit">Update</button>
+    </form>
+</main>
+{% endblock %}

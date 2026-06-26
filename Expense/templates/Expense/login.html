@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+Login
+{% endblock %}
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'Expense/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h2 class="form-heading">
+            Login
+        </h2>
+
+        {% for field in form %}
+
+        <div class="form-control">
+
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+
+        </div>
+
+        {% endfor %}
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</main>
+
+{% endblock %}

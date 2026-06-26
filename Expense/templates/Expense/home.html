@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %} Home {% endblock %}
+{% block css_file %}
+<link rel="stylesheet" href="{% static "Expense/home.css" %}">
+{% endblock %}
+{% block content %}
+<main>
+    <form action="" method="post" id="form-control">
+       {% csrf_token %} 
+       {% for exp in expense %}
+       <div class="form-control">
+          {{ exp.label_tag }}
+          {{ exp }}
+          {{ exp.errors }}
+       </div>
+       {% endfor %}
+        <button type="submit">Save</button>
+    </form>
+</main>
+{% endblock %}
